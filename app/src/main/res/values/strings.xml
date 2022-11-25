@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HiltWithCompose</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">forgot Password</string>
+</resources>
