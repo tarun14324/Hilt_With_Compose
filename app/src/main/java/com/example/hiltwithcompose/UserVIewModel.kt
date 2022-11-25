@@ -24,8 +24,10 @@ class UsersViewModel @Inject constructor(
     var charactersFlowFromDb: MutableStateFlow<List<TableItems>> = MutableStateFlow(emptyList())
     var isConnected = mutableStateOf(false)
 
-    private val coroutineExceptionHandler = CoroutineExceptionHandler{ _, throwable ->
-        throwable.printStackTrace()
+    private val coroutineExceptionHandler by lazy {
+        CoroutineExceptionHandler { _, throwable ->
+            throwable.printStackTrace()
+        }
     }
 
     fun getUsers() {

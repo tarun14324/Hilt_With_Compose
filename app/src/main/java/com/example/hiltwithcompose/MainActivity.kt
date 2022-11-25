@@ -1,3 +1,5 @@
+@file:Suppress("OPT_IN_IS_NOT_ENABLED")
+
 package com.example.hiltwithcompose
 
 import android.content.Context
@@ -88,7 +90,7 @@ fun MainScreenContent(viewModel: UsersViewModel, padding: PaddingValues) {
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun ListFromDb(items: List<TableItems>) {
+private fun ListFromDb(items: List<TableItems>) {
     LazyColumn {
         items(items) { item ->
             Card(
@@ -132,7 +134,7 @@ fun ListFromDb(items: List<TableItems>) {
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun ListFromApi(items: List<Result>) {
+private fun ListFromApi(items: List<Result>) {
     LazyColumn {
         items(items) { item ->
             Card(

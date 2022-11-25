@@ -34,7 +34,7 @@ class NetworkChecker(context: Context) :
     }
 
     private fun netWorkCallback() = object : ConnectivityManager.NetworkCallback() {
-        override fun onAvailable(network: android.net.Network) {
+        override fun onAvailable(network: Network) {
             super.onAvailable(network)
             val networkCapability = connectionManager.getNetworkCapabilities(network)
             val hasNetworkConnection =
